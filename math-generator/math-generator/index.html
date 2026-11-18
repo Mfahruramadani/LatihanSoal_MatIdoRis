@@ -1,0 +1,357 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1e8">
+  <meta name="description" content="Tempat berlatih matematika, bahasa, logika, kecepatan berpikir, dan memori.">
+  <title>MENTAL LAB — Training Ground</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <header class="topbar">
+      <a href="#" class="brand" aria-label="Mental Lab beranda">
+        <span class="brand-mark">M.</span>
+        <span class="brand-name">MENTAL<span>LAB</span></span>
+      </a>
+
+      <div class="topbar-right">
+        <span class="system-status">
+          <span class="status-dot"></span>
+          TRAINING SYSTEM ONLINE
+        </span>
+        <span class="version">V.01</span>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HOME -->
+      <section id="home-view" class="view">
+
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              YOUR DAILY MENTAL TRAINING
+            </div>
+
+            <h1>
+              TRAIN<br>
+              YOUR <span>MIND.</span>
+            </h1>
+
+            <p class="hero-description">
+              Asah kemampuan berpikir melalui latihan yang terukur.
+              Mulai dari berhitung hingga menguji daya ingat.
+            </p>
+
+            <div class="hero-bottom">
+              <span class="hero-index">01 — 05</span>
+              <span class="hero-caption">PILIH AREA LATIHANMU</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="visual-top">
+              <span>MENTAL PERFORMANCE</span>
+              <span>EST. 2026</span>
+            </div>
+
+            <div class="visual-symbol">
+              <div class="symbol-ring ring-one"></div>
+              <div class="symbol-ring ring-two"></div>
+              <div class="symbol-core">M</div>
+              <span class="symbol-coordinate coord-one">01</span>
+              <span class="symbol-coordinate coord-two">02</span>
+              <span class="symbol-coordinate coord-three">03</span>
+            </div>
+
+            <div class="visual-bottom">
+              <span>THINK CLEARLY.</span>
+              <span>THINK FASTER.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">TRAINING MODULES / 01</span>
+            <h2>Pilih latihan.</h2>
+          </div>
+          <span class="section-count">SELECT A MODULE ↘</span>
+        </div>
+
+        <section id="player-card" class="player-card" aria-label="Progres pemain"></section>
+
+        <div id="topic-grid" class="topic-grid"></div>
+
+        <section id="history-panel" class="history-panel hidden"></section>
+
+        <footer class="site-footer">
+          <span>MENTAL LAB © 2026</span>
+          <span>BUILT FOR BETTER THINKING.</span>
+        </footer>
+      </section>
+
+      <!-- SETUP -->
+      <section id="setup-view" class="view hidden">
+        <button id="back-home" class="back-button">
+          <span>←</span> KEMBALI KE MENU
+        </button>
+
+        <div class="setup-layout">
+          <div class="setup-intro">
+            <span class="section-kicker">CONFIGURATION / 02</span>
+            <h1 id="setup-title">Matematika</h1>
+            <p id="setup-description">Atur latihanmu sebelum memulai.</p>
+
+            <div class="setup-stamp">
+              <span class="stamp-icon">✳</span>
+              <span>FOCUS<br>MODE</span>
+            </div>
+          </div>
+
+          <form id="setup-form" class="setup-card">
+
+            <div class="form-heading">
+              <span>SESSION SETTINGS</span>
+              <span>01 / CONFIG</span>
+            </div>
+
+            <label class="form-field">
+              <span class="field-label">01. JENIS LATIHAN</span>
+              <select id="subtype" required></select>
+            </label>
+
+            <div class="form-row">
+              <label class="form-field">
+                <span class="field-label">02. KESULITAN</span>
+                <select id="difficulty">
+                  <option value="easy">Mudah</option>
+                  <option value="medium" selected>Sedang</option>
+                  <option value="hard">Sulit</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span class="field-label">03. JUMLAH SOAL</span>
+                <select id="question-count">
+                  <option value="5">5 Soal</option>
+                  <option value="10" selected>10 Soal</option>
+                  <option value="15">15 Soal</option>
+                  <option value="20">20 Soal</option>
+                  <option value="30">30 Soal</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="form-field">
+              <span class="field-label">04. MODE PENGERJAAN</span>
+              <select id="practice-mode">
+                <option value="sheet">Semua soal dalam satu halaman</option>
+                <option value="single">Satu soal per halaman</option>
+              </select>
+            </label>
+
+            <div class="form-row">
+              <label class="form-field">
+                <span class="field-label">05. ACAK SOAL</span>
+                <select id="shuffle">
+                  <option value="yes" selected>Aktif</option>
+                  <option value="no">Nonaktif</option>
+                </select>
+              </label>
+
+              <label class="form-field">
+                <span class="field-label">06. BATAS WAKTU</span>
+                <select id="time-limit">
+                  <option value="0">Tanpa batas</option>
+                  <option value="1">1 Menit</option>
+                  <option value="3">3 Menit</option>
+                  <option value="5" selected>5 Menit</option>
+                  <option value="10">10 Menit</option>
+                  <option value="15">15 Menit</option>
+                </select>
+              </label>
+            </div>
+
+            <p id="pool-hint" class="settings-note hidden"></p>
+            <p id="settings-note" class="settings-note">
+              Kerjakan setiap soal dengan teliti. Jawaban akan diperiksa setelah latihan selesai.
+            </p>
+
+            <button type="submit" class="primary-button">
+              MULAI LATIHAN <span>↗</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- PRACTICE -->
+      <section id="practice-view" class="view hidden">
+        <div class="practice-topbar">
+          <button id="quit-practice" class="back-button">
+            ← KELUAR
+          </button>
+
+          <div class="practice-session">
+            <span class="status-dot"></span>
+            LIVE SESSION
+          </div>
+        </div>
+
+        <div class="practice-heading">
+          <div>
+            <span class="section-kicker">TRAINING IN PROGRESS / 03</span>
+            <h1 id="practice-title">Latihan</h1>
+            <p id="practice-subtitle"></p>
+          </div>
+
+          <div class="timer-panel">
+            <span class="timer-label">TIME ELAPSED</span>
+            <strong id="timer">00:00</strong>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div class="progress-meta">
+            <span id="progress-label">0 terjawab · 10 soal</span>
+            <span>PROGRESS</span>
+          </div>
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="q-timer" class="question-timer hidden"></div>
+
+        <div id="sheet-container" class="sheet-container"></div>
+
+        <div id="single-container" class="single-container hidden">
+          <div class="single-meta">
+            <span id="single-count">Soal 1 dari 10</span>
+            <span>FOCUS ON THIS QUESTION</span>
+          </div>
+
+          <div id="memo-panel" class="memo-panel hidden">
+            <span class="section-kicker">MEMORY CHALLENGE</span>
+            <div id="memo-content" class="memo-content"></div>
+            <button id="memo-ready" class="primary-button">
+              SAYA SIAP <span>→</span>
+            </button>
+          </div>
+
+          <div id="single-question" class="single-question"></div>
+
+          <div id="single-choices" class="choices single-choices"></div>
+
+          <label class="answer-field">
+            <span class="field-label">JAWABANMU</span>
+            <input
+              id="single-answer"
+              type="text"
+              autocomplete="off"
+              placeholder="Ketik jawaban di sini..."
+            >
+          </label>
+
+          <div class="single-controls">
+            <button id="previous-button" class="secondary-button">
+              ← SEBELUMNYA
+            </button>
+            <button id="next-button" class="primary-button">
+              BERIKUTNYA →
+            </button>
+          </div>
+        </div>
+
+        <div class="finish-area">
+          <span>Sudah selesai mengerjakan?</span>
+          <button id="finish-button" class="finish-button">
+            PERIKSA JAWABAN ↗
+          </button>
+        </div>
+      </section>
+
+      <!-- RESULT -->
+      <section id="result-view" class="view hidden">
+        <div class="result-top">
+          <span class="section-kicker">SESSION COMPLETE / 04</span>
+          <span class="result-tag">RESULT GENERATED</span>
+        </div>
+
+        <div class="result-hero">
+          <div class="result-title">
+            <span class="result-label">HASIL LATIHAN</span>
+            <h1>GOOD<br><span>WORK.</span></h1>
+            <p id="result-topic">Matematika</p>
+          </div>
+
+          <div class="score-display">
+            <span>YOUR SCORE</span>
+            <strong><span id="score-value">0</span><small>/100</small></strong>
+            <div class="score-line"></div>
+          </div>
+        </div>
+
+        <div class="result-stats">
+          <div class="result-stat">
+            <span class="stat-label">JAWABAN BENAR</span>
+            <strong id="correct-value">0</strong>
+            <span class="stat-unit">SOAL</span>
+          </div>
+
+          <div class="result-stat">
+            <span class="stat-label">JAWABAN SALAH</span>
+            <strong id="wrong-value">0</strong>
+            <span class="stat-unit">SOAL</span>
+          </div>
+
+          <div class="result-stat">
+            <span class="stat-label">DURASI</span>
+            <strong id="duration-value">00:00</strong>
+            <span class="stat-unit">WAKTU</span>
+          </div>
+
+          <div class="result-stat">
+            <span class="stat-label">TOTAL SOAL</span>
+            <strong id="result-count">0 soal</strong>
+            <span class="stat-unit">SESI INI</span>
+          </div>
+        </div>
+
+        <section id="reward-panel" class="reward-panel hidden" aria-label="Reward sesi"></section>
+
+        <div class="review-heading">
+          <div>
+            <span class="section-kicker">ANSWER ANALYSIS / 05</span>
+            <h2>Evaluasi jawaban.</h2>
+          </div>
+        </div>
+
+        <div id="review-list" class="review-list"></div>
+
+        <div class="result-actions">
+          <button id="back-result-home" class="secondary-button">
+            ← MENU UTAMA
+          </button>
+          <button id="retry-wrong-button" class="secondary-button hidden">
+            ULANGI SOAL SALAH
+          </button>
+          <button id="retry-button" class="primary-button">
+            COBA LAGI ↗
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
